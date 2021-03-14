@@ -39,14 +39,14 @@
         <!-- 注册表单 -->
         <a-tab-pane key="2" tab="注册">
           <div class="item">
-            <a-input size="large" placeholder="账户">
+            <a-input size="large" placeholder="账户" v-model:value="regForm.username">
               <template #prefix>
                 <UserOutlined />
               </template>
             </a-input>
           </div>
           <div class="item">
-            <a-input size="large" placeholder="密码">
+            <a-input size="large" placeholder="密码" v-model:value="regForm.password">
               <template #prefix>
                 <LockOutlined />
               </template>
@@ -60,7 +60,7 @@
             </a-input>
           </div>
           <div class="item">
-            <a-button size="large" type="primary">注册</a-button>
+            <a-button size="large" type="primary" @click="register">注册</a-button>
           </div>
         </a-tab-pane>
       </a-tabs>
@@ -71,5 +71,5 @@
 <script src="./index.js"></script>
 
 <style lang="scss" scoped>
-@import "./index.scss";
+@import './index.scss';
 </style>
