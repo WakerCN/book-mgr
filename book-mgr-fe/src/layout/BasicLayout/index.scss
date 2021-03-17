@@ -1,0 +1,50 @@
+.basic-layout {
+  .app-header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 64px;
+    background: #fff;
+    box-shadow: 0 2px 8px #f0f1f2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    width: 100%;
+    z-index: 1;
+    .header-logo {
+      img {
+        height: 50px;
+        display: inline-block;
+      }
+      .title {
+        line-height: 64px;
+        font-size: 20px;
+      }
+    }
+    .header-menu {
+      .hellow-msg {
+        font-weight: bold;
+        margin-right: 10px;
+      }
+    }
+  }
+  .app-header-placeholder {
+    height: 64px;
+  }
+  .app-content {
+    display: flex;
+    .app-left{
+      width: 256px;
+      position: fixed;
+      top: 64px;
+      bottom: 0;
+      background: #aaa;
+    }
+    .app-right {
+      flex: 1;
+      padding: 20px;
+      margin-left: 256px;
+    }
+  }
+}
