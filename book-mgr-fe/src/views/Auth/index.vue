@@ -16,14 +16,14 @@
         <!-- 登录表单 -->
         <a-tab-pane key="1" tab="登录">
           <div class="item">
-            <a-input size="large" placeholder="用户名">
+            <a-input size="large" placeholder="用户名" v-model:value="logForm.username">
               <template #prefix>
                 <UserOutlined />
               </template>
             </a-input>
           </div>
           <div class="item">
-            <a-input size="large" placeholder="密码">
+            <a-input size="large" placeholder="密码" v-model:value="logForm.password">
               <template #prefix>
                 <LockOutlined />
               </template>
@@ -33,7 +33,7 @@
             <a>忘了密码</a>
           </div>
           <div class="item">
-            <a-button size="large" type="primary">登录</a-button>
+            <a-button size="large" type="primary" @click="login">登录</a-button>
           </div>
         </a-tab-pane>
         <!-- 注册表单 -->
@@ -53,7 +53,7 @@
             </a-input>
           </div>
           <div class="item">
-            <a-input size="large" placeholder="邀请码">
+            <a-input size="large" placeholder="邀请码" v-model:value="regForm.inviteCode">
               <template #prefix>
                 <MailOutlined />
               </template>

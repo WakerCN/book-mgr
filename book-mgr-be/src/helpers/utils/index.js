@@ -18,7 +18,15 @@ const getMonthByTimeStamp = (timeStamp) => {
   return new Date(timeStamp).getMonth();
 };
 
+/**
+ *
+ */
+const getBody = (context) => {
+  return context.request.body || {};
+};
+
 module.exports = {
   getYearByTimeStamp,
   getMonthByTimeStamp,
+  getBody,
 };
